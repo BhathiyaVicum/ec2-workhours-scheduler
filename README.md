@@ -17,9 +17,14 @@ The system automatically manages selected EC2 instances based on a predefined wo
 - 📅 Runs from **Monday to Friday**
 - 🏷️ Only manages EC2 instances with the `Schedule=enabled` tag
 
+<p align="center">
+  <img width="574" height="450" alt="Untitled Diagram drawio (3)" src="https://github.com/user-attachments/assets/aeede36f-b960-4f97-b028-804170c7abbe" />
+</p>
+
 Instead of manually starting and stopping EC2 instances every day, **Amazon EventBridge Scheduler** invokes an **AWS Lambda function** at the configured times. The Lambda function finds EC2 instances with the required tag and performs the requested action.
 
 The same Lambda function handles both **start** and **stop** operations. EventBridge Scheduler sends either `"start"` or `"stop"` as input to determine which action the Lambda function should perform.
+
 
 # 📸 Screenshots
 <img width="1895" height="761" alt="ss3" src="https://github.com/user-attachments/assets/946644da-33c6-4a02-b470-b44df426e12a" />
