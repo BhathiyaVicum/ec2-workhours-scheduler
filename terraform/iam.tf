@@ -22,7 +22,7 @@ resource "aws_iam_policy" "lambda_policy" {
 }
 
 resource "aws_iam_role" "lambda_execution_role" {
-  name = "ec2-manage-policy"
+  name = "ec2-manage-role"
 
   assume_role_policy = jsonencode(
     {
